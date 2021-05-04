@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "Grille.h"
@@ -8,7 +9,6 @@ public:
 	Joueur(std::string _nom, char _jeton);
 	void AfficherNom();
 	virtual void Jouer(Grille* grille);
-	~Joueur();
 	char jeton;
 
 private:
