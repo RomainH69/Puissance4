@@ -4,7 +4,7 @@ class Grille
 {
 public:
   Grille();
-  void ajouterPiece(int colonne);
+  void ajouterPiece(int colonne, char couleur);
   char** getGrille();
   void display();
 
