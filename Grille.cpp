@@ -34,3 +34,14 @@ void Grille::ajouterPiece(int colonne, char couleur)
 
   grille[i][colonne]=couleur;
 }
+
+bool Grille::ColonnePleine(int colonne)
+{
+  char ligne = grille[5][colonne]; //Si la plus haute case est occupée alors la ligne est pleine
+	if (ligne == 'O' || ligne == 'X')
+	{
+		return 1;
+	}
+	else
+		return 0;
+}
