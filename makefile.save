@@ -1,0 +1,4 @@
+all: Grille Jeu Joueur JoueurHumain JoueurIA Puissance4 TP_Puissance4 stdafx
+	g++ TP_Puissance 4.o Grille.o Jeu.o Joueur.o JoueurHumain.o JoueurIA.o Puissance4.o stdafx.o
+
+TP_Puissance4: TP_Puissance4.cpp TP_Pui

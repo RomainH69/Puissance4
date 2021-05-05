@@ -1,3 +1,4 @@
+
 #include "Joueur.h"
 
 
@@ -13,5 +14,9 @@ void Joueur::AfficherNom()
 }
 
 void Joueur::Jouer(Grille* grille)
+{
+}
+
+Joueur::~Joueur()
 {
 }
