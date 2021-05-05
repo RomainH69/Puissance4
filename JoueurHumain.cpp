@@ -1,3 +1,4 @@
+
 #include "JoueurHumain.h"
 
 
@@ -8,14 +9,14 @@ JoueurHumain::JoueurHumain(std::string _nom, char _jeton) : Joueur(_nom, _jeton)
 int JoueurHumain::ChoixColonne(Grille* grille)
 {
 	int colonne=-1;
-	while (colonne < 0 || colonne>7) //Tant que l'utilisateur n'entre pas une colonne correcte
+	while (colonne < 0 || colonne>7)
 	{
-		std::cout << "Entrez le numero de la colonne" << std::endl;
+		std::cout << "Entrez le num�ro de la colonne" << std::endl;
 		std::cin >> colonne;
 		colonne--;
 		if (grille->ColonnePleine(colonne))
 		{
-			std::cout << "Colonne pleine" << std::endl; //Si colonne pleine, considerée comme invalide
+			std::cout << "Colonne pleine" << std::endl;
 			colonne = -1;
 		}
 	}
@@ -26,6 +27,10 @@ int JoueurHumain::ChoixColonne(Grille* grille)
 void JoueurHumain::Jouer(Grille *grille)
 {
 	int colonne = ChoixColonne(grille);
-	grille->ajouterPiece(colonne, jeton);
-  grille->display();
+	grille->Afficher_choix(colonne, jeton);
+}
+
+
+JoueurHumain::~JoueurHumain()
+{
 }
